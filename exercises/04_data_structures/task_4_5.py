@@ -13,3 +13,9 @@
 
 command1 = "switchport trunk allowed vlan 1,2,3,5,8"
 command2 = "switchport trunk allowed vlan 1,3,8,9"
+
+ip_1 = command1[30:39:2]
+ip_2 = command2[30:38:2]
+
+result = sorted(set(ip_1).intersection(ip_2))
+print(result)
