@@ -20,3 +20,20 @@
 """
 
 ip = "192.168.3.1"
+
+a = int(ip[:3])
+b = int(ip[4:7])
+c = int(ip[8:9])
+d = int(ip[10:11])
+
+bin_a = format(a, '08b')
+bin_b = format(b, '08b')
+bin_c = format(c, '08b')
+bin_d = format(d, '08b')
+
+print(
+  f"""
+  {a}       {b}       {c}         {d}
+  {bin_a}  {bin_b}  {bin_c}  {bin_d}
+  """
+)

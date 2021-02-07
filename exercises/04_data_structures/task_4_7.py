@@ -10,3 +10,10 @@
 """
 
 mac = "AAAA:BBBB:CCCC"
+
+a = bin(int(mac[:4], 16))
+b = bin(int(mac[5:9], 16))
+c = bin(int(mac[10:], 16))
+
+result = a + b + c
+print(result.replace('0b', ''))
