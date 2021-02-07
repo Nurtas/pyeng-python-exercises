@@ -21,19 +21,38 @@
 
 ip = "192.168.3.1"
 
-a = int(ip[:3])
-b = int(ip[4:7])
-c = int(ip[8:9])
-d = int(ip[10:11])
+# a = int(ip[:3])
+# b = int(ip[4:7])
+# c = int(ip[8:9])
+# d = int(ip[10:11])
 
-bin_a = format(a, '08b')
-bin_b = format(b, '08b')
-bin_c = format(c, '08b')
-bin_d = format(d, '08b')
+# bin_a = format(a, '08b')
+# bin_b = format(b, '08b')
+# bin_c = format(c, '08b')
+# bin_d = format(d, '08b')
 
-print(
-  f"""
-  {a}       {b}       {c}         {d}
-  {bin_a}  {bin_b}  {bin_c}  {bin_d}
-  """
-)
+# print(
+#   f"""
+#   {a}       {b}       {c}         {d}
+#    {bin_a}  {bin_b}  {bin_c}  {bin_d}
+#   """
+# )
+ip = ip.split('.')
+
+a = int(ip[0])
+b = int(ip[1])
+c = int(ip[2])
+d = int(ip[3])
+
+# .format()
+ip_template = '''
+{0:<8}  {1:<8}  {2:<8}  {3:<8}
+{0:08b}  {1:08b}  {2:08b}  {3:08b}
+'''
+print(ip_template.format(a,b,c,d))
+
+# f-строки 
+print(f'''
+{a:<8}  {b:<8}  {c:<8}  {d:<8}
+{a:08b}  {b:08b}  {c:08b}  {d:08b}
+''')

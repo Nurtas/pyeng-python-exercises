@@ -11,9 +11,9 @@
 
 mac = "AAAA:BBBB:CCCC"
 
-a = bin(int(mac[:4], 16))
-b = bin(int(mac[5:9], 16))
-c = bin(int(mac[10:], 16))
+a = bin(int(mac[:4], 16)).strip('0b')
+b = bin(int(mac[5:9], 16)).strip('0b')
+c = bin(int(mac[10:], 16)).strip('0b')
 
 result = a + b + c
-print(result.replace('0b', ''))
+print(result)
