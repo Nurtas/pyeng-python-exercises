@@ -49,3 +49,7 @@ london_co = {
         "routing": True,
     },
 }
+
+key = input('Введите имя устройства: ')
+param = input('Введите имя параметра (location, vendor, model, ios, ip): ')
+print(london_co[key].get(param, 'Такого параметра нет'))

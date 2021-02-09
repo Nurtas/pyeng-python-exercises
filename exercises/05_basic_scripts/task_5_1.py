@@ -46,3 +46,6 @@ london_co = {
         "routing": True,
     },
 }
+
+dict_key = input('Введите имя устройства: ')
+print(london_co[dict_key])
