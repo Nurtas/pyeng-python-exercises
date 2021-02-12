@@ -51,6 +51,7 @@ switchport trunk allowed vlan 2,3,4,5
 """
 
 access_template = [
+    "interface {}",
     "switchport mode access",
     "switchport access vlan {}",
     "switchport nonegotiate",
@@ -59,7 +60,25 @@ access_template = [
 ]
 
 trunk_template = [
+    "interface {}",
     "switchport trunk encapsulation dot1q",
     "switchport mode trunk",
     "switchport trunk allowed vlan {}",
 ]
+
+interface = input('Введите режим работы интерфейса (access/trunk): ')
+type_interface = input('Введите тип и номер интерфейса: ')
+number_VLAN = input('Введите номер влан(ов): ')
+
+print() # new line \n
+
+access_mode = '\n'.join(access_template).format(type_interface, number_VLAN)
+trunk_mode = '\n'.join(trunk_template).format(interface, number_VLAN)
+
+
+interface_mode = {
+    'access': access_mode,
+    'trunk': trunk_mode,
+}
+
+print(interface_mode[interface])
