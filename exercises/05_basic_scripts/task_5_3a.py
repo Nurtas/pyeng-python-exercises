@@ -12,6 +12,7 @@
 """
 
 access_template = [
+    "interface {}",
     "switchport mode access",
     "switchport access vlan {}",
     "switchport nonegotiate",
@@ -20,6 +21,7 @@ access_template = [
 ]
 
 trunk_template = [
+    "interface {}",
     "switchport trunk encapsulation dot1q",
     "switchport mode trunk",
     "switchport trunk allowed vlan {}",

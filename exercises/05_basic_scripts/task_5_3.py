@@ -73,7 +73,7 @@ number_VLAN = input('Введите номер влан(ов): ')
 print() # new line \n
 
 access_mode = '\n'.join(access_template).format(type_interface, number_VLAN)
-trunk_mode = '\n'.join(trunk_template).format(interface, number_VLAN)
+trunk_mode = '\n'.join(trunk_template).format(type_interface, number_VLAN)
 
 
 interface_mode = {
